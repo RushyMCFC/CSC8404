@@ -11,6 +11,5 @@ public class RegistrationNumber {
 		
 		System.out.println(obj.drive(95));
 		System.out.println(obj);
-		
 	}
 }
