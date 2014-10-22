@@ -1,0 +1,42 @@
+
+public class SmallCar implements Car{
+	private RegNo regNo;
+	private double fuel;
+	
+	public SmallCar(RegNo regNo) {
+		this.regNo = regNo;
+		this.fuel = 49.0;
+	}
+	
+	public double getFuel() {
+		return fuel;
+	}
+	
+	public String getRegNo() {
+		return regNo.getRegistrationNo();
+	}
+	
+	public boolean checkTank() {
+		if(fuel == 49.0) {
+			return true;
+		}
+		else
+			return false;
+	}
+	
+	public double addFuel(double addF) {
+		if(fuel == 49.0) {
+			return 0;
+		}
+		else {
+			if(addF+fuel >= 49.0) {
+				double temp = fuel;
+				fuel = 49.0;
+				return 49.0-temp;
+			}
+			else {
+				
+			}
+		}
+	}
+}

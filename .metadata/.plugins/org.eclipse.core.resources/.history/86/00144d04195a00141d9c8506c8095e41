@@ -1,0 +1,19 @@
+
+public class RegistrationNumber {
+
+	public String getRegNumber() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public static void main(String[] args) {
+		Car obj = new SmallCar(new RegistrationNumber(),43.0);
+		SmallCar x = (SmallCar) obj;
+		x.addFuel(10000);
+		x.setRented();
+		x.drive(900);
+		x.addFuel(23)
+		System.out.println(x);
+	}
+
+}

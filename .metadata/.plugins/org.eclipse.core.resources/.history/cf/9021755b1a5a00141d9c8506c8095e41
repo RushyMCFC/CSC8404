@@ -1,0 +1,8 @@
+
+public interface Car {
+	public double getFuel();
+	public String getRegNo();
+	public String getType();
+	public boolean getRented();
+	public boolean checkTank();
+}

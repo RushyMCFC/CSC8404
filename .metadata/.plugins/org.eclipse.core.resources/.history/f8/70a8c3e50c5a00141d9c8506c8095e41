@@ -1,0 +1,18 @@
+
+public class SmallCar implements Car{
+	private RegNo regNo;
+	private double fuel;
+	
+	public SmallCar(RegNo regNo, double fuel) {
+		this.regNo = regNo;
+		this.fuel = fuel;
+	}
+	
+	public double getFuel() {
+		return fuel;
+	}
+	
+	public RegNo getRegNo() {
+		return regNo.getRegistrationNo();
+	}
+}
