@@ -1,0 +1,25 @@
+
+public class RegistrationNumber {
+	public final String firstPart;
+	public final int secondPart;
+	public final String thirdPart;
+	private final String carRegistrationNumber;
+	
+	public RegistrationNumber(String fp, int sp, String tp) {
+		firstPart = fp;
+		secondPart  = sp;
+		thirdPart = tp;
+		carRegistrationNumber = fp+sp+" "+tp;
+	}
+	public String getRegNumber() {
+		return carRegistrationNumber;
+	}
+	
+	public static void main(String[] args) {
+		Car obj = new LargeCar(new RegistrationNumber("NG",57,"HXE"),55.0);
+		
+		System.out.println(obj.drive(95));
+		System.out.println(obj);
+		
+	}
+}

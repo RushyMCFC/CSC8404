@@ -1,0 +1,36 @@
+import java.util.Calendar;
+import java.util.Date;
+
+
+public class Person {
+	private Name fullName;
+	private Date dob;
+	
+	public Person(Name fullName, Date dob) {
+		this.fullName = new Name(fullName.getFirstName(),fullName.getLastName());
+		this.dob = dob;
+	}
+	
+	public Name getFullName() {
+		return fullName;
+	}
+	
+	public Date getDOB() {
+		return dob;
+	}
+	
+	public String toString() {
+		return fullName+"\nDate of Birth : "+dob;
+	}
+	
+	public static void main(String args[]) {
+		Name n = new Name("Rushil","Ahuja");
+		Calendar cal = Calendar.getInstance();
+	    cal.set(Calendar.YEAR, 1922);
+	    cal.set(Calendar.MONTH, 24);
+	    cal.set(Calendar.DAY_OF_MONTH, 11);
+	    Date d = cal.getTime();
+	    Person obj = new Person(n,d);
+	    System.out.println(obj);
+	}
+}

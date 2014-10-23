@@ -5,7 +5,7 @@ public class SmallCar implements Car{
 	private boolean rented;
 	
 	public SmallCar(RegistrationNumber regNo, double fuel) {
-		this.regNo = regNo;
+		this.regNo = new RegistrationNumber(regNo.getFirstPart(),regNo.getSecondPart());
 		this.fuel = fuel;
 		this.rented = false;
 		totalFuel();
@@ -21,8 +21,8 @@ public class SmallCar implements Car{
 		return fuel;
 	}
 	
-	public String getRegNo() {
-		return regNo.getRegNumber();
+	public RegistrationNumber getRegNo() {
+		return regNo;
 	}
 	
 	public String getType() {

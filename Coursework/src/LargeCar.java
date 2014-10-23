@@ -5,7 +5,7 @@ public class LargeCar implements Car{
 	private boolean rented;
 	
 	public LargeCar(RegistrationNumber regNo, double fuel) {
-		this.regNo = regNo;
+		this.regNo = new RegistrationNumber(regNo.getFirstPart(),regNo.getSecondPart());
 		this.fuel = fuel;
 		this.rented = false;
 		totalFuel();
@@ -21,8 +21,9 @@ public class LargeCar implements Car{
 		return fuel;
 	}
 	
-	public String getRegNo() {
-		return regNo.getRegNumber();
+	public RegistrationNumber getRegNo() {
+		return regNo;
+		//return new RegistrationNumber(regNo.getFirstPart(),regNo.getSecondPart());
 	}
 	
 	public String getType() {
@@ -90,7 +91,7 @@ public class LargeCar implements Car{
 	
 	public String toString() {
 		String display = "Car Type : "+getType();
-		display += "\nRegistration Number : "+getRegNo();
+		display += "\nRegistration Number : "+getRegNo().getRegNumber();
 		display += "\nTotal Fuel : "+getFuel();
 		display += "\nRented : "+getRented();
 		return display;

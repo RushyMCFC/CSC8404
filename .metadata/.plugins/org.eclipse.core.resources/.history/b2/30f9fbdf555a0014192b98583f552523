@@ -1,0 +1,12 @@
+import java.util.Date;
+
+
+public class Person {
+	private Name fullName;
+	private Date dob;
+	
+	public Person(Name fullName, Date dob) {
+		this.fullName = new Name(fullName.getFirstName(),fullName.getLastName());
+		this.dob = new Date(dob.getYear(),dob.getMonth(),dob.getDay());
+	}
+}

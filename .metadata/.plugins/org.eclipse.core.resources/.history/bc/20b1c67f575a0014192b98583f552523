@@ -1,0 +1,51 @@
+import java.util.Random;
+
+
+public class RegistrationNumber {
+	private String firstPart;
+	private String secondPart;
+	private String carRegistrationNumber;
+	
+	public RegistrationNumber(String fp, String sp) {
+		firstPart = fp;
+		secondPart  = sp;
+		carRegistrationNumber = fp+" "+sp;
+	}
+	
+	public RegistrationNumber() {
+		Random rand = new Random();
+		String p1 = (char)(rand.nextInt((90 - 65) + 1) + 65) + "";
+		String p2 = (char)(rand.nextInt((90 - 65) + 1) + 65) + "";
+		int p3 = rand.nextInt(10);
+		int p4 = rand.nextInt(10);
+		String p5 = (char)(rand.nextInt((90 - 65) + 1) + 65) + "";
+		String p6 = (char)(rand.nextInt((90 - 65) + 1) + 65) + "";
+		String p7 = (char)(rand.nextInt((90 - 65) + 1) + 65) + "";
+		firstPart = p1+p2+p3+p4;
+		secondPart = p5+p6+p7;
+		carRegistrationNumber = firstPart+" "+secondPart;
+	}
+	
+	public String getRegNumber() {
+		return carRegistrationNumber;
+	}
+	
+	public String getFirstPart() {
+		return firstPart;
+	}
+	
+	public String getSecondPart() {
+		return secondPart;
+	}
+	
+	public static void main(String[] args) {
+//		Car obj = new LargeCar(new RegistrationNumber("NG57","HXE"),55.0);
+//		Car obj2 = new LargeCar(new RegistrationNumber(),55.0);
+//		System.out.println(obj.drive(95));
+//		System.out.println(obj);
+//		System.out.println(obj2);
+		RegistrationNumber r = new RegistrationNumber();
+		Car obj = new LargeCar(r,55.0);
+		System.out.println(obj);
+	}
+}

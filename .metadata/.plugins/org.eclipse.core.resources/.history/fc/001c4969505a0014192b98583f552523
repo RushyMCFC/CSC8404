@@ -1,0 +1,40 @@
+
+public class RegistrationNumber {
+	public final String firstPart;
+	public final String secondPart;
+	private final String carRegistrationNumber;
+	
+//	public RegistrationNumber(String fp, String sp) {
+//		firstPart = fp;
+//		secondPart  = sp;
+//		carRegistrationNumber = fp+" "+sp;
+//	}
+	
+	public RegistrationNumber() {
+		generateRandomRegNo();
+	}
+	
+	private static void generateRandomRegNo() {
+		String p1 = Math.random((90 - 65) + 1) + 65;
+	}
+	
+	public String getRegNumber() {
+		return carRegistrationNumber;
+	}
+	
+	public String getFirstPart() {
+		return firstPart;
+	}
+	
+	public String getSecondPart() {
+		return secondPart;
+	}
+	
+	public static void main(String[] args) {
+		Car obj = new LargeCar(new RegistrationNumber("NG57","HXE"),55.0);
+		
+		System.out.println(obj.drive(95));
+		System.out.println(obj);
+		
+	}
+}

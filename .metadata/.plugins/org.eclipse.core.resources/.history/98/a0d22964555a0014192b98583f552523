@@ -1,0 +1,7 @@
+import java.util.Date;
+
+
+public class Person {
+	private Name fullName;
+	private Date dob;
+}

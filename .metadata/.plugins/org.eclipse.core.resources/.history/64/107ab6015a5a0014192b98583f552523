@@ -1,0 +1,24 @@
+import java.util.Date;
+
+
+public class Person {
+	private Name fullName;
+	private Date dob;
+	
+	public Person(Name fullName, Date dob) {
+		this.fullName = new Name(fullName.getFirstName(),fullName.getLastName());
+		this.dob = (Date) dob.clone();
+	}
+	
+	public Name getFullName() {
+		return fullName;
+	}
+	
+	public Date getDOB() {
+		return dob;
+	}
+	
+	public String toString() {
+		return fullName+"\nDate of Birth : "+dob;
+	}
+}
