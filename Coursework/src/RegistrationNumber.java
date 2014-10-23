@@ -55,5 +55,7 @@ public class RegistrationNumber {
 		RegistrationNumber r = new RegistrationNumber();
 		Car obj = new LargeCar(r,55.0);
 		System.out.println(obj);
+		Car obj2 = new SmallCar();
+		System.out.println(obj2);
 	}
 }

@@ -3,12 +3,19 @@ public class SmallCar implements Car{
 	private RegistrationNumber regNo;
 	private double fuel;
 	private boolean rented;
+	private final String carType = "Small";
 	
 	public SmallCar(RegistrationNumber regNo, double fuel) {
 		this.regNo = new RegistrationNumber(regNo.getFirstPart(),regNo.getSecondPart());
 		this.fuel = fuel;
 		this.rented = false;
 		totalFuel();
+	}
+	
+	public SmallCar() {
+		this.regNo = new RegistrationNumber();
+		this.rented = false;
+		this.fuel = 49.0;
 	}
 	
 	private void totalFuel() {
@@ -22,11 +29,11 @@ public class SmallCar implements Car{
 	}
 	
 	public RegistrationNumber getRegNo() {
-		return regNo;
+		return new RegistrationNumber(regNo.getFirstPart(),regNo.getSecondPart());
 	}
 	
 	public String getType() {
-		return "Small Car";
+		return carType+" Car";
 	}
 	
 	public boolean getRented() {
@@ -78,7 +85,7 @@ public class SmallCar implements Car{
 	
 	public String toString() {
 		String display = "Car Type : "+getType();
-		display += "\nRegistration Number : "+getRegNo();
+		display += "\nRegistration Number : "+getRegNo().getRegNumber();
 		display += "\nTotal Fuel : "+getFuel();
 		display += "\nRented : "+getRented();
 		return display;

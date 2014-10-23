@@ -1,0 +1,49 @@
+import java.util.Calendar;
+import java.util.Date;
+
+
+public class Person extends DrivingLicence{
+	private Name fullName;
+	private Date dob;
+	private String dLicenceNumber;
+	
+	public Person(Name fullName, Date dob, Date issueDate) {
+		super(fullName, issueDate);
+		this.fullName = new Name(fullName.getFirstName(),fullName.getLastName());
+		this.dob = (Date) dob.clone();
+		dLicenceNumber = super.getLicenceNumber();
+	}
+	
+	public Name getFullName() {
+		return fullName;
+	}
+	
+	public Date getDOB() {
+		return dob;
+	}
+	
+	public String toString() {
+		return fullName+"\nDate of Birth : "+dob;
+	}
+	
+	public static void main(String args[]) {
+		Name n = new Name("Rushil","Ahuja");
+		Calendar cal = Calendar.getInstance();
+	    cal.set(Calendar.YEAR, 1994);
+	    cal.set(Calendar.MONTH, 10);
+	    cal.set(Calendar.DAY_OF_MONTH, 24);
+	    Date d = cal.getTime();
+	    Calendar cal1 = Calendar.getInstance();
+	    cal1.set(Calendar.YEAR, 2004);
+	    Date d1 = cal1.getTime();
+	    Person obj = new Person(n,d,d1);
+	    System.out.println(obj);
+	    String x = d.toString();
+	    System.out.println(x.substring(x.lastIndexOf(' ')+1));
+	    String xxx = "HELLO5";
+	    int y = xxx.charAt(0)-65 + xxx.charAt(1)-65 + xxx.charAt(5)-48;
+	    System.out.println(y);
+	    DrivingLicence obx = new DrivingLicence(n,d1);
+	    System.out.println(obx.getLicenceNumber());
+	}
+}

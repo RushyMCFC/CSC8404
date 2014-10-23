@@ -16,6 +16,10 @@ public class Name {
 		return lastName;
 	}
 	
+	public String getFullName() {
+		return firstName+" "+lastName;
+	}
+	
 	public String toString() {
 		return "First Name : "+firstName+"\nLast Name : "+lastName;
 	}
