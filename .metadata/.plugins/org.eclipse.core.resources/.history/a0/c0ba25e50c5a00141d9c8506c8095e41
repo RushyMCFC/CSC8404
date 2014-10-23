@@ -1,9 +1,0 @@
-
-public class RegNo {
-
-	public RegNo getRegistrationNo() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-}
