@@ -1,0 +1,18 @@
+import java.util.Date;
+
+
+public class DrivingLicence {
+	private Name fullName;
+	private Date dob;
+	private String firstPart;
+	private String secondPart;
+	private String thirdPart;
+	private String licenceNumber;
+	
+	public DrivingLicence(Name fullName, Date dob, String firstPart, String secondPart, String thirdPart, String licenceNumber) {
+		this.fullName = new Name(fullName.getFirstName(),fullName.getLastName());
+		this.dob = (Date) dob.clone();
+		this.firstPart = firstPart;
+		
+	}
+}

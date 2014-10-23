@@ -33,9 +33,6 @@ public class Person {
 	    Person obj = new Person(n,d);
 	    System.out.println(obj);
 	    String x = d.toString();
-	    System.out.println(x.substring(x.lastIndexOf(' ')+1));
-	    String xxx = "HELLO5";
-	    int y = xxx.charAt(0)-65 + xxx.charAt(1)-65 + xxx.charAt(5)-0;
-	    System.out.println(y);
+	    System.out.println(x.substring(x.lastIndexOf(' ')));
 	}
 }

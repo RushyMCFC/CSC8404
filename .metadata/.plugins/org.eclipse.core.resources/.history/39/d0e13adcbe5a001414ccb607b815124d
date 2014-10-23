@@ -1,0 +1,21 @@
+import java.util.Date;
+
+
+public class DrivingLicence extends Person {
+	private Name fullName;
+	private Date dob;
+	private String firstPart;
+	private String secondPart;
+	private String thirdPart;
+	private String licenceNumber;
+	
+	public DrivingLicence(Name fullName, Date dob, String firstPart, String secondPart, String thirdPart) {
+		super(fullName, dob);
+		this.firstPart = firstPart;
+		this.secondPart = secondPart;
+		this.thirdPart = thirdPart;
+		this.licenceNumber = this.firstPart+"-"+this.secondPart+"-"+this.thirdPart;
+	}
+	
+	public get
+}

@@ -1,0 +1,8 @@
+
+public class DrivingLicence {
+	private Name fullName;
+	private String firstPart;
+	private String secondPart;
+	private String thirdPart;
+	private String licenceNumber;
+}
