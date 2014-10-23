@@ -1,0 +1,6 @@
+import java.util.List;
+
+
+public class RentCompany {
+	List<Car> allCars = new ArrayList<Cars>();
+}

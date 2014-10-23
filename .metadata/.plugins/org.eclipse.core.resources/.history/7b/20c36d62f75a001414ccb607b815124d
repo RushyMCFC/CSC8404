@@ -1,0 +1,17 @@
+import java.util.HashMap;
+import java.util.Map;
+
+
+public class RentCompany {
+	Map<Car, String> allCars = new HashMap<Car, String>();
+	Map<Car, Person> rentedCars = new HashMap<Car, Person>();
+	
+	public RentCompany(Map<Car, String> allCars, Map<Car, Person> rentedCars) {
+		this.allCars = allCars;
+		this.rentedCars = rentedCars;
+	}
+	
+	public int availableCars(String carType) {
+		
+	}
+}

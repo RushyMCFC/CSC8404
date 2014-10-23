@@ -1,0 +1,43 @@
+import java.util.HashMap;
+import java.util.Map;
+
+
+public class RentCompany {
+	Map<Car, Boolean> allCars = new HashMap<Car, Boolean>();
+	Map<Car, Person> rentedCars = new HashMap<Car, Person>();
+	
+	public RentCompany(Map<Car, Boolean> allCars, Map<Car, Person> rentedCars) {
+		this.allCars = allCars;
+		this.rentedCars = rentedCars;
+	}
+	
+	public int availableCars(String carType) {
+		int count = 0;
+		for (Map.Entry<Car, Boolean> entry : allCars.entrySet()) {
+		    if((entry.getKey().getType().compareTo(carType) == 0) && !entry.getValue()) {
+		    	count++;
+		    }
+		}
+		return count;
+	}
+	
+	public Map<Car, Person> getRentedCars() {
+		return rentedCars;
+	}
+	
+	public Car getCar(Person p) {
+		boolean flag = false;
+		Car rentedCar = null;
+		for (Map.Entry<Car, Person> entry : rentedCars.entrySet()) {
+		    if(entry.getValue().equals(p)) {
+		    	flag = true;
+		    	rented = entry.getKey();
+		    }
+		}
+		if(flag == false) {
+			return null;
+		}
+		else
+			return rentedCar;
+	}
+}
